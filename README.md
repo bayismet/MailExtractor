@@ -3,6 +3,16 @@ To extract mails from a website.
 
 It is a C# library.This library gives you a hand about finding and listing e-mails in a website. It just gives the addresses at a single webpage. However, you can modify it to get mail addresses from multi-links.
 
+Methods
+
+public string htmlCode(String site): Takes a website as a parameter, returns its html code.
+
+public MatchCollection mailExtractor1(String text): Takes a text(in this case a html source code), finds the mail addresses in it.
+
+public void mailSender(MailInfos m,MatchCollection matches): Takes a "MailInfos" object to initialize mail's properties. In this method, "matches" means the mail addresses in the websites source code. It adds that matches to our mail's body, then send it.
+
+public void execute(MailInfos m, string site): Executes all functions in correct order.
+
 How It Works
 
 It works very simply. It gets the source code of a website as html, find matches (e-mails) via RegEx, then put it in a "MatchCollection". Then, for every "Match" in "MatchCollection", it adds the "Match" to mail's body. Then send it to the address that you want.
