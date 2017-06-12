@@ -1,7 +1,7 @@
 # MailExtractor
 To extract mails from a website.
 
-This library gives you a hand about finding and listing e-mails in a website.
+It is a C# library.This library gives you a hand about finding and listing e-mails in a website. It just gives the addresses at a single webpage. However, you can modify it to get mail addresses from multi-links.
 
 How It Works
 
